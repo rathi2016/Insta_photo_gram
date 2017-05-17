@@ -1,2 +1,11 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<% provide(:title, "Home") %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%= yield(:title) %> | Ruby on Rails</title>
+  </head>
+  <body>
+     <h1> Welcome To Insta_pho_gram </h1>
+  </body>
+</html>
