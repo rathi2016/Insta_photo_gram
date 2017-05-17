@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+
   def index
     @posts = Post.all
   end
@@ -8,9 +9,22 @@ class PostsController < ApplicationController
   end
 
   def create
-  @post = Post.create(post_params)
+  @post = current_user.posts.build(post_params)
+  if @post.save
   redirect_to posts_path
+   else
+     render 'static_pages/home'
+  end
 end
+
+def destroy
+    @post = current_user.posts.find params[:id]
+    @post.destroy
+
+    flash[:notice] = "Post deleted"
+
+    redirect_to posts_path
+  end
 
   private
 
