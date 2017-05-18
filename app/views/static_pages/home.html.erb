@@ -10,7 +10,7 @@
 
      <li>
          <% if current_user %>
-         <li><%= link_to "logout", logout_path %></li>
+         <li><%= link_to 'Log out', session_path(current_user),method: :delete, data: { confirm: 'Are you sure?' } %></li>
          <li> <%= link_to "Posts",posts_path %></li>
          <%else %>
          <%= link_to "Sign up now!" , signup_path %>

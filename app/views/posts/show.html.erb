@@ -1,3 +1,10 @@
 <%= image_tag @post.image.url(:medium) %>
 <br>
-<%= @post.caption %>
+<h2><%= @post.caption %></h2>
+<%= link_to "Back", root_path %>
+<% if logged_in? %>
+  <% if @post.user_id == current_user.id %>
+   <%= link_to "Edit", edit_user_post_path(@post) %>
+   <%= link_to "Delete", post_path(@post), method: :delete %>
+  <% end  %>
+<% end  %>

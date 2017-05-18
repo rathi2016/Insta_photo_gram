@@ -1,7 +1,12 @@
 
 <h1>Insta_Pho_gram </h1>
-<%= link_to "Create New Post", new_post_path%>
+<h2><%= link_to "Create New Post", new_post_path%></h2>
+<h3><%= link_to "Back", root_path %></h3>
+<br>
 <%  @posts.each  do |post|%>
+<br>
 <%= image_tag post.image.url(:medium)%>
-<%= post.caption %>
+<br>
+<h2><%= post.caption %></h2>
+
 <% end %>
