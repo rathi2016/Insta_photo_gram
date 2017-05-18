@@ -19,9 +19,9 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       log_in(@user)
-      redirect_to user_path(@user)
+      redirect_to root_path
     else
-      render :new
+      render 'new'
     end
   end
 
@@ -34,7 +34,7 @@ class UsersController < ApplicationController
       flash[:success] = "Profile updated"
       redirect_to @user
     else
-      render :edit
+      render 'edit'
     end
   end
 
@@ -43,6 +43,7 @@ class UsersController < ApplicationController
     flash[:success] = "User deleted"
     redirect_to root_path
   end
+
 
   private
       def user_params
@@ -60,4 +61,5 @@ class UsersController < ApplicationController
     def correct_user
       @user = User.find(params[:id])
       redirect_to(root_path) unless current_user?(@user)
+    end
 end

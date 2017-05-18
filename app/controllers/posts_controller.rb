@@ -1,7 +1,12 @@
 class PostsController < ApplicationController
+  before_action :logged_in?
 
   def index
     @posts = Post.all
+  end
+
+  def show
+    @post = Post.find(params[:id])
   end
 
   def new
@@ -9,26 +14,40 @@ class PostsController < ApplicationController
   end
 
   def create
-  @post = current_user.posts.build(post_params)
-  if @post.save
-  redirect_to posts_path
-   else
-     render 'static_pages/home'
+
+    @post = current_user.posts.build(post_params)
+    if @post.save
+      redirect_to post_path(@post)
+      else
+        flash[:error] = "Unsuccessfully updated"
+         redirect_to new_post_path
+    end
   end
-end
 
-def destroy
-    @post = current_user.posts.find params[:id]
-    @post.destroy
+  def edit
+    @post = Post.find(params[:id])
+  end
 
-    flash[:notice] = "Post deleted"
+  def update
+    post = Post.find(params[:id])
+    if (post.update(post_params))
+      redirect_to post_path(post)
+    else
+      redirect_to edit_post_path(post)
+    end
+  end
 
-    redirect_to posts_path
+  def destroy
+    post = Post.find(params[:id])
+    post.destroy
+    flash[:message] = "Successfully deleted"
+    redirect_to user_posts_path(current_user)
   end
 
   private
 
  def post_params
-  params.require(:post).permit(:image, :caption)
+  params.require(:post).permit(:image, :caption, :user_id)
  end
+
 end

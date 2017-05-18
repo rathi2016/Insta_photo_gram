@@ -1,4 +1,4 @@
-<%= form_for @post, controller: 'posts', action:'create', html: { multipart: true } do |f| %>
+<%= form_for @post, html: { multipart: true } do |f| %>
 
   <%= f.label :caption%>
   <%= f.text_field :caption%>
@@ -7,5 +7,6 @@
   <%= f.file_field :image %>
 
   <%= f.submit "Upload"%>
-
 <% end %>
+
+<%=link_to "home", root_path %>
