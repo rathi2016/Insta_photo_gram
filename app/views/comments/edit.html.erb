@@ -1,0 +1,10 @@
+<% if logged_in? %>
+
+ <%= form_for([@post, @comment])do |f|%>
+ <%= f.label "Edit Comment" %>
+ <%= f.text_field :content %>
+
+ <%= f.submit " edit comment" %>
+ <% end  %>
+
+<% end  %>
