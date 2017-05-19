@@ -1,7 +1,7 @@
 <%= image_tag @post.image.url(:medium) %>
 <br>
 <h2><%= @post.caption %></h2>
-<%= link_to "Back", root_path %>
+<%= link_to "Back", posts_path %>
 <% if logged_in? %>
   <% if @post.user_id == current_user.id %>
    <%= link_to "Edit", edit_user_post_path(@post) %>
