@@ -3,10 +3,18 @@
 <h2><%= link_to "Create New Post", new_post_path%></h2>
 <br>
 <%  @posts.each  do |post|%>
-<br>
-<%= image_tag post.image.url(:medium)%>
 
-<br>
-<p>Posted by - <%= post.user.email %> </p>
-<h2><%= post.caption %></h2>
+<div class="row">
+  <div class="col-md-8">
+    <p>Posted by - <%= post.user.email %> </p>
+  <%= image_tag post.image.url(:medium)%>
+  <h2><%= post.caption %> ( <%= link_to "view detail", post_path(post) %> )</h2>
+
+</div>
+<div class="col-md-4">
+<h3>Comments-</h3>
+  <%= render post.comments %>
+    </div>
+
+</div>
 <% end %>

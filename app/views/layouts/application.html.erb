@@ -15,6 +15,9 @@
         <nav>
           <ul class="nav navbar-nav navbar-right">
             <li><%= link_to "Home",   root_path %></li>
+            <% if current_user %>
+            <li><%= link_to 'Log out', session_path(current_user),method: :delete, data: { confirm: 'Are you sure?' } %></li>
+          <% end %>
           </ul>
         </nav>
       </div>
