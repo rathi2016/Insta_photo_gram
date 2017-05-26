@@ -22,7 +22,16 @@
 
  section {
    overflow: auto;
+   opacity: 0.45;
  }
+
+ section .container {
+  background-color: transparent;
+}
+section .container .row {
+  background-color: gray;
+  padding: 1.5em;
+}
 
  textarea {
    resize: vertical;
