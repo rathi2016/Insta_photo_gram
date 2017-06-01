@@ -11,6 +11,7 @@ Technologies used:
 .Git
 .Heroku
 
+
 How to run it
 
 git clone git@github.com:rathi2016/Insta_photo_gram.git
