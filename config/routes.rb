@@ -4,14 +4,15 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  resources :sessions
-  resources :users do
+  resources :sessions, only: [:show, :destroy]
+  resources :users, only: [:index, :edit, :show, :destoy] do
     resources :posts, only: [:index, :show, :edit, :update]
   end
 
   get  '/home',   to: 'static_pages#home'
   get  '/signup',  to: 'users#new'
-  get    '/login',   to: 'sessions#new'
-  post   '/login',   to: 'sessions#create'
+  get   '/login',   to: 'sessions#new'
+  post  '/login',   to: 'sessions#create'
+
   root 'static_pages#home'
 end
