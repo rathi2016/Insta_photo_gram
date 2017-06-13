@@ -10,6 +10,9 @@ module SessionsHelper
 
   def current_user
     @current_user ||= User.find_by(id: session[:user_id])
+    # a ||= b (a || a = b)
+    # if a is false, nil or undefined, then evaluate b
+    # and set a to the result
   end
 
   def logged_in?
