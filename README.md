@@ -2,8 +2,13 @@
 
 Instagram inspired rails app,
 ![Screen shot](/app/img/screenshot.png)
-## Technologies used:
 
+## What it does ?
+- User can add new images
+- users can make comments on other users uploaded images
+- edit feature is available for both images and comments and only the owner of comment or image can edit them.
+
+## Technologies used:
 - Ruby
 - Ruby on Rails
 - Postgresql
