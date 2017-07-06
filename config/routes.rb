@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   end
 
   resources :sessions, only: [:new, :create, :destroy]
+  
   resources :users   do
     resources :posts, only: [:index, :show, :edit, :update]
   end

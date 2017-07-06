@@ -1,7 +1,7 @@
 # README
 
 Instagram inspired rails app,
-
+![Screen shot](/app/img/screenshot.png)
 ## Technologies used:
 
 - Ruby
