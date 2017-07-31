@@ -26,3 +26,6 @@ git clone git@github.com:rathi2016/Insta_photo_gram.git
 - rails s
 
 - open your browser on localhost:3000
+
+## Herokku Link
+- https://stark-shelf-42923.herokuapp.com/home
