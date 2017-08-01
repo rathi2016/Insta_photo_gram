@@ -20,19 +20,22 @@
    padding-top: 60px;
  }
 
- // section {
- //   overflow: auto;
- //   opacity: 0.45;
- // }
+ section {
+   overflow: auto;
+   opacity: 0.45;
+ }
 
-//  section .container {
-//   background-color: transparent;
-// }
-// section .container .row {
-//   background-color: gray;
-//   padding: 1.5em;
-// }
+ section .container {
+  background-color: transparent;
+}
+section .container .row {
+  background-color: gray;
+  padding: 1.5em;
+}
+.jumbotron {
+background-color: rgba(0,0,0,0.2);
 
+}
  textarea {
    resize: vertical;
    h1 {
@@ -40,7 +43,7 @@
   }
  }
 .container{
-  background: rgba(0,0,0,0.3);
+  // background: rgba(0,0,0,0.3);
   color: #fff;
   padding: 1rem;
   font-family: Avenir, Helvetica, sans-serif;
