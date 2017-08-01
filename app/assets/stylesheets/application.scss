@@ -20,18 +20,18 @@
    padding-top: 60px;
  }
 
- section {
-   overflow: auto;
-   opacity: 0.45;
- }
+ // section {
+ //   overflow: auto;
+ //   opacity: 0.45;
+ // }
 
- section .container {
-  background-color: transparent;
-}
-section .container .row {
-  background-color: gray;
-  padding: 1.5em;
-}
+//  section .container {
+//   background-color: transparent;
+// }
+// section .container .row {
+//   background-color: gray;
+//   padding: 1.5em;
+// }
 
  textarea {
    resize: vertical;
@@ -39,7 +39,12 @@ section .container .row {
     margin-bottom: 10px;
   }
  }
-
+.container{
+  background: rgba(0,0,0,0.3);
+  color: #fff;
+  padding: 1rem;
+  font-family: Avenir, Helvetica, sans-serif;
+}
  .center {
    text-align: center;
  }
