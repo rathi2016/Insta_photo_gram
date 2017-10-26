@@ -16,38 +16,18 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
- body {
-   padding-top: 60px;
- }
 
- section {
-   overflow: auto;
-   opacity: 0.45;
- }
-
- section .container {
-  background-color: transparent;
-}
-section .container .row {
-  background-color: gray;
-  padding: 1.5em;
-}
 .jumbotron {
 background-color: rgba(0,0,0,0.2);
 
 }
- textarea {
-   resize: vertical;
-   h1 {
-    margin-bottom: 10px;
-  }
- }
-.container{
-  // background: rgba(0,0,0,0.3);
-  color: #fff;
-  padding: 1rem;
-  font-family: Avenir, Helvetica, sans-serif;
+body {
+  padding-top: 100px;
 }
+textarea {
+ resize: vertical;
+}
+
  .center {
    text-align: center;
  }
@@ -82,7 +62,6 @@ p {
 }
 /* styling for sign up & sign in form */
 input, textarea, select, .uneditable-input {
-
   border: 1px solid #bbb;
   padding: 12px 20px;
   display: inline-block;
@@ -92,4 +71,26 @@ input, textarea, select, .uneditable-input {
 
 input {
   height: auto !important;
+}
+
+footer a {
+  color: black;
+}
+
+footer a:hover {
+  color: black;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
 }
